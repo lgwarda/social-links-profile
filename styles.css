@@ -1,18 +1,7 @@
-
 @font-face {
     font-family: 'Inter';
-    src: url('./assets/fonts/static/Inter-Regular.ttf') format('truetype'),
-         url('./assets/fonts/static/Inter-SemiBold.ttf') format('truetype'),
-         url('./assets/fonts/static/Inter-Bold.ttf') format('truetype'),
-         url('./assets/fonts/static/Inter-VariableFont_slnt,wght.ttf') format('truetype'); /* Add formats as needed */
+    src: url('./assets/fonts/static/Inter-Regular.ttf') format('truetype');
     font-weight: 400; /* Regular */
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('./assets/fonts/static/Inter-Bold.ttf') format('truetype');
-    font-weight: 700; /* Bold */
     font-style: normal;
 }
 
@@ -23,8 +12,12 @@
     font-style: normal;
 }
 
-/* Add any additional styles for the variable font if needed */
-
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
 
 /* Define CSS variables */
 :root {
@@ -36,7 +29,6 @@
     --font-family: 'Inter', sans-serif;
     --font-size: 14px;
     --margin: 1rem; /* Base margin */
-    --font-family: 'Inter', sans-serif;
     --font-weight-regular: 400;  /* Regular */
     --font-weight-semibold: 600; /* SemiBold */
     --font-weight-bold: 700;     /* Bold */
@@ -48,10 +40,9 @@ body {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
-    height: 100vh; /* Makes the body take the full viewport height */
+    height: 100vh; /* Full viewport height */
     margin: 0; /* Removes default margin */
     padding: 0 1rem; /* Added padding for small screens */
-    font-family: var(--font-family);
     font-size: var(--font-size);
     background-color: var(--grey-900);
     color: var(--green);
@@ -60,7 +51,7 @@ body {
 
 article {
     background-color: var(--grey-800);
-    max-width: 360px;
+    max-width: 320px;
     width: 100%;
     border-radius: 10px;
     padding: 20px; /* Added padding for better spacing */
@@ -72,21 +63,22 @@ img {
 }
 
 h1 {
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-regular);
     color: var(--white);
     margin-bottom: 10px;
+    font-size: x-large;
 }
 
 p {
     font-weight: var(--font-weight-semibold);
     margin: 0;
+    font-size: var(--font-size);
 }
 
 blockquote {
     font-weight: var(--font-weight-regular);
     color: var(--white);
-    margin: 30px 0 25px 0;
-   
+    margin: 35px 30px 25px 30px;
 }
 
 ul {
@@ -110,7 +102,7 @@ a {
     padding: 10px 15px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transition for shadow */
-    margin: 0 1rem; /* Added horizontal margin for spacing */
+    margin: 0 var(--margin); /* Added horizontal margin for spacing */
 }
 
 a:hover {
